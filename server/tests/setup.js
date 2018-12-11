@@ -5,12 +5,12 @@ const keys = require('../config/keys')
 jest.setTimeout(40000)
 // console.log("hemmmmmm")
 
-// beforeAll(() => {
+beforeAll(() => {
   mongoose.Promise = global.Promise
   mongoose.connect(keys.mongoURI, { useNewUrlParser: true })
 // console.log(mongoose)
-// })
+})
 
-// afterAll(() => {
-  // mongoose.disconnect()
-// })
+afterAll(() => {
+  mongoose.disconnect()
+})
