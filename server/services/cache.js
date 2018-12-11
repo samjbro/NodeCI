@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const redis = require('redis')
 const promisify = require('util').promisify
 const keys = require('../config/keys')
+console.log({keys})
 const client = redis.createClient(keys.redisUrl)
 client.hget = promisify(client.hget)
 const exec = mongoose.Query.prototype.exec

@@ -11,7 +11,8 @@
     "client:start": "yarn --cwd client start",
     "client:add": "yarn --cwd client add",
     "client:build": "yarn --cwd client build",
-    "test": "yarn --cwd server test"
+    "test": "yarn --cwd server test",
+    "start:ci": "PORT=3000 NODE_ENV=ci yarn server:start"
   },
   "private": true,
   "workspaces": [
