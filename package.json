@@ -1,0 +1,25 @@
+{
+  "name": "081218-node-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"yarn server:start\" \"yarn client:start\"",
+    "start": "NODE_ENV=production yarn server:start",
+    "server:start": "yarn --cwd server start",
+    "server:add": "yarn --cwd server add",
+    "client:start": "yarn --cwd client start",
+    "client:add": "yarn --cwd client add",
+    "client:build": "yarn --cwd client build",
+    "test": "yarn --cwd server test"
+  },
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "tests"
+  ],
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
