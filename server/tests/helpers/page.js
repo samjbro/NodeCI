@@ -5,7 +5,7 @@ const sessionFactory = require('../factories/sessionFactory')
 class Page {
   static async build() {
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       args: ['--no-sandbox']
     })
 
@@ -25,6 +25,7 @@ class Page {
 
   async login() {
     const user = await userFactory()
+
     const {session, sig} = sessionFactory(user)
 
     await this.page.setCookie({name: 'session', value: session})

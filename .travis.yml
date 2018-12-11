@@ -16,6 +16,6 @@ install:
   - yarn
   - yarn client:build
 script:
-  - nohup yarn start &
+  - nohup yarn start:ci &
   - sleep 3
   - yarn test
